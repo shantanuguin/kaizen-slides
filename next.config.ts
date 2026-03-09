@@ -21,7 +21,7 @@ const nextConfig: NextConfig = {
     ],
   },
   output: 'export',
-  basePath: '/kaizen-slides',
+  basePath: process.env.GITHUB_ACTIONS ? '/kaizen-slides' : '',
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
