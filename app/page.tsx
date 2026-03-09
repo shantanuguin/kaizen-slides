@@ -104,7 +104,7 @@ const slides = [
 
 const Gear = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 100 100" className={className} fill="currentColor">
-    <path d="M93.3,44.8l-8.5-1.4c-0.6-2.5-1.5-4.9-2.7-7.2l5.4-6.7c1.3-1.6,1.1-3.9-0.4-5.3l-6.1-6.1c-1.4-1.4-3.7-1.6-5.3-0.4 l-6.7,5.4c-2.3-1.2-4.7-2.1-7.2-2.7L60.4,12c-0.3-2-2-3.5-4-3.5H43.6c-2,0-3.7,1.5-4,3.5l-1.4,8.5c-2.5,0.6-4.9,1.5-7.2,2.7 l-6.7-5.4c-1.6-1.3-3.9-1.1-5.3,0.4l-6.1,6.1c-1.4,1.4-1.6,3.7-0.4,5.3l5.4,6.7c-1.2,2.3-2.1,4.7-2.7,7.2l-8.5,1.4 c-2,0.3-3.5,2-3.5,4v8.6c0,2,1.5,3.7,3.5,4l8.5,1.4c0.6,2.5,1.5,4.9,2.7,7.2l-5.4,6.7c-1.3,1.6-1.1,3.9,0.4,5.3l6.1,6.1 c1.4,1.4,3.7,1.6,5.3,0.4l6.7-5.4c2.3,1.2,4.7,2.1,7.2,2.7l1.4,8.5c0.3,2,2,3.5,4,3.5h12.8c2,0,3.7-1.5,4-3.5l1.4-8.5 c2.5-0.6,4.9-1.5,7.2-2.7l6.7,5.4c1.6,1.3,3.9,1.1,5.3-0.4l6.1-6.1c1.4-1.4,1.6-3.7,0.4-5.3l-5.4-6.7c1.2-2.3,2.1-4.7,2.7-7.2 l8.5-1.4c2-0.3,3.5-2,3.5-4v-8.6C96.8,46.8,95.3,45.1,93.3,44.8z M50,68.5c-10.2,0-18.5-8.3-18.5-18.5S39.8,31.5,50,31.5 S68.5,39.8,68.5,50S60.2,68.5,50,68.5z"/>
+    <path d="M93.3,44.8l-8.5-1.4c-0.6-2.5-1.5-4.9-2.7-7.2l5.4-6.7c1.3-1.6,1.1-3.9-0.4-5.3l-6.1-6.1c-1.4-1.4-3.7-1.6-5.3-0.4 l-6.7,5.4c-2.3-1.2-4.7-2.1-7.2-2.7L60.4,12c-0.3-2-2-3.5-4-3.5H43.6c-2,0-3.7,1.5-4,3.5l-1.4,8.5c-2.5,0.6-4.9,1.5-7.2,2.7 l-6.7-5.4c-1.6-1.3-3.9-1.1-5.3,0.4l-6.1,6.1c-1.4,1.4-1.6,3.7-0.4,5.3l5.4,6.7c-1.2,2.3-2.1,4.7-2.7,7.2l-8.5,1.4 c-2,0.3-3.5,2-3.5,4v8.6c0,2,1.5,3.7,3.5,4l8.5,1.4c0.6,2.5,1.5,4.9,2.7,7.2l-5.4,6.7c-1.3,1.6-1.1,3.9,0.4,5.3l6.1,6.1 c1.4,1.4,3.7,1.6,5.3,0.4l6.7-5.4c2.3,1.2,4.7,2.1,7.2,2.7l1.4,8.5c0.3,2,2,3.5,4,3.5h12.8c2,0,3.7-1.5,4-3.5l1.4-8.5 c2.5-0.6,4.9-1.5,7.2-2.7l6.7,5.4c1.6,1.3,3.9,1.1,5.3-0.4l6.1-6.1c1.4-1.4,1.6-3.7,0.4-5.3l-5.4-6.7c1.2-2.3,2.1-4.7,2.7-7.2 l8.5-1.4c2-0.3,3.5-2,3.5-4v-8.6C96.8,46.8,95.3,45.1,93.3,44.8z M50,68.5c-10.2,0-18.5-8.3-18.5-18.5S39.8,31.5,50,31.5 S68.5,39.8,68.5,50S60.2,68.5,50,68.5z" />
   </svg>
 );
 
@@ -180,7 +180,7 @@ export default function Slideshow() {
       {/* 16:9 Container */}
       <div className="relative w-full max-w-[177.78vh] max-h-[56.25vw] aspect-video bg-gradient-to-b from-[#43A047] to-[#1B5E20] overflow-hidden shadow-2xl flex flex-col @container">
         <BackgroundBlobs />
-        
+
         <AnimatePresence mode="wait">
           <motion.div
             key={slide.lang}
@@ -195,9 +195,9 @@ export default function Slideshow() {
             <div className="flex flex-col items-center text-center space-y-[1.5cqh] mt-[2cqh] shrink-0">
               {/* Logo */}
               <div className="h-[10cqh] flex items-center justify-center mb-[1cqh]">
-                <img 
-                  src="/logo.png" 
-                  alt="Logo" 
+                <img
+                  src="logo.png" 
+                  alt="Logo"
                   className="h-full object-contain drop-shadow-md"
                   onError={(e) => {
                     e.currentTarget.style.display = 'none';
@@ -222,7 +222,7 @@ export default function Slideshow() {
 
             {/* Middle Section: 5 Columns */}
             <div className="flex-1 w-full flex flex-row items-center justify-between px-[2cqw] my-[2cqh]">
-              
+
               {/* Col 1: Left Sidebar - Process */}
               <div className="flex flex-col gap-[3cqh] w-[20%]">
                 <div className="text-white font-bold text-[2.2cqh] uppercase tracking-widest mb-[1cqh] ml-[1cqw]">{slide.sidebar.process}</div>
@@ -257,7 +257,7 @@ export default function Slideshow() {
               {/* Col 3: Center QR */}
               <div className="relative h-[40cqh] aspect-square flex items-center justify-center w-[30%]">
                 {/* Blurred Gear */}
-                <motion.div 
+                <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
                   className="absolute w-[140%] h-[140%] flex items-center justify-center pointer-events-none opacity-20 blur-[4px]"
@@ -265,15 +265,15 @@ export default function Slideshow() {
                   <Gear className="w-full h-full text-white" />
                 </motion.div>
 
-                {/* Glass QR Code */}
-                <motion.div 
+                {/* Themed QR Code (No Glassmorphism) */}
+                <motion.div
                   animate={{ y: [-5, 5, -5] }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="relative z-20 bg-white shadow-[0_8px_32px_rgba(0,0,0,0.15)] rounded-[2cqh] p-[2.5cqh]"
+                  className="relative z-20 bg-gradient-to-br from-[#E8F5E9] to-[#C8E6C9] rounded-[3cqh] p-[2.5cqh]"
                 >
-                  <img 
-                    src="/qr.png" 
-                    alt="QR Code" 
+                  <img
+                    src="qr.png" 
+                    alt="QR Code"
                     className="w-[22cqh] h-[22cqh] object-contain"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
